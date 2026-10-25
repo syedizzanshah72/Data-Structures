@@ -84,6 +84,25 @@ temp->next = del->next;
 delete del;
 }
 
+void SearchNode(int val){
+    if(val == head->data){
+        cout << "Value find at first index";
+        return;
+    }
+    int count = 0;
+    Node* temp = head;
+    while(temp->data != val){
+        temp = temp->next;
+        count++;
+    } 
+    if(temp->data == val){
+        cout << "Value found at index " <<count;
+        return;
+    }else{
+        cout << "Value not found " <<endl;
+    }
+}
+
 // Traversing the list 
 
 void display(){
@@ -107,6 +126,7 @@ int main(){
     l.insertAtEnd(40);
     l.insertAtStart(92);
     l.insertBetweenTwoNodes(90,100);
+    l.SearchNode(50);
     l.display();
 
     return 0;
