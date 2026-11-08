@@ -91,11 +91,11 @@ void SearchNode(int val){
     }
     int count = 0;
     Node* temp = head;
-    while(temp->data != val){
+    while(temp != NULL && temp->data != val){
         temp = temp->next;
         count++;
     } 
-    if(temp->data == val){
+    if(temp != NULL && temp->data == val){
         cout << "Value found at index " <<count;
         return;
     }else{

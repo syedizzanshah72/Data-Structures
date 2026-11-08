@@ -57,5 +57,8 @@ class List{
             
         }
     }
+    void deleteNode(int aftervalue){
+        
+    }
 
 };

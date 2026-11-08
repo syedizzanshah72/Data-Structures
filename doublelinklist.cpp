@@ -61,6 +61,18 @@ class List{
         temp->next= newNode;
 
     }
+    void deleteNode(int afterValue){
+        Node* temp = head;
+        if(afterValue == head->value){
+            head->next = head;
+            delete temp;
+        }
+        if(temp != NULL && temp->value != afterValue){
+            temp = temp->next;
+        }
+        temp->next->prev = temp;
+        temp = temp->next;
+    }
     void Display(){
         Node* temp = head;
         while(temp != NULL){
